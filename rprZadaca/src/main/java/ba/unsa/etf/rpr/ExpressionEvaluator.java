@@ -38,19 +38,19 @@ public class ExpressionEvaluator {
                     double val = values.pop();
                     if(ops.equals("+")){
                         val = values.pop() + val;
-                        q.add(ops);
+                       // q.add(ops);
                     }else if (ops.equals("-")) {
                         val = values.pop() - val;
-                       q.add(ops);
+                      //  q.add(ops);
                     }else if (ops.equals("*")) {
                         val = values.pop() * val;
-                        q.add(ops);
+                      //  q.add(ops);
                     }else if (ops.equals("/")) {
                         val = values.pop() / val;
-                        q.add(ops);
+                       // q.add(ops);
                     }else if (ops.equals("sqrt")) {
                         val = Math.sqrt(val);
-                        q.add(ops);
+                      //  q.add(ops);
                     }
                     values.push(val);
                 }else{
@@ -58,13 +58,13 @@ public class ExpressionEvaluator {
             }
         }
 
-
+        /*
         for(String temp: operators){
             System.out.println(temp);
         }
         for(double temp: values){
             System.out.println(temp);
-        }
+        }*/
        /* number = values.pop();
         for(String sign:operators){
             double temp = values.pop();
@@ -78,8 +78,7 @@ public class ExpressionEvaluator {
                 number = number / temp;
             }
         }*/
-
-
+        number = values.pop();
 
         return number;
     }

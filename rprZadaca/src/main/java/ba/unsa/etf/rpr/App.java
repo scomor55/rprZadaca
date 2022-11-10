@@ -15,12 +15,12 @@ public class App
         Scanner in = new Scanner(System.in);*/
        /* String expression = in.nextLine();*/
 
-        String expression = "( 1 + 2 ) * 3";
+        String expression = "( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) ) ";
         char[] str = expression.toCharArray();
 
 
         try{
-          /*  char temp1='\0',temp2;
+            /*char temp1='\0',temp2;
                 for(char temp : str){
                     temp2 = temp1;
                     temp1 = temp;
