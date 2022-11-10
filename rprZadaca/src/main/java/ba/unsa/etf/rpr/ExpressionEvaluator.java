@@ -21,43 +21,66 @@ public class ExpressionEvaluator {
 
         while(!q.isEmpty()){
             String temporary = q.poll();
-            if(temporary.equals("(")) ;
+            if(temporary.equals("(")){}
             else if (temporary.equals("+")) {
-                operators.push(s);
+                operators.push(temporary);
             }else if (temporary.equals("-")) {
-                operators.push(s);
+                operators.push(temporary);
             }else if (temporary.equals("*")) {
-                operators.push(s);
+                operators.push(temporary);
             }else if (temporary.equals("/")) {
-                operators.push(s);
+                operators.push(temporary);
             }else if (temporary.equals("sqrt")) {
-                operators.push(s);
+                operators.push(temporary);
             }else if (temporary.equals(")"))
                 {
                     String ops = operators.pop();
                     double val = values.pop();
                     if(ops.equals("+")){
                         val = values.pop() + val;
+                        q.add(ops);
                     }else if (ops.equals("-")) {
                         val = values.pop() - val;
+                       q.add(ops);
                     }else if (ops.equals("*")) {
                         val = values.pop() * val;
+                        q.add(ops);
                     }else if (ops.equals("/")) {
                         val = values.pop() / val;
+                        q.add(ops);
                     }else if (ops.equals("sqrt")) {
                         val = Math.sqrt(val);
+                        q.add(ops);
                     }
                     values.push(val);
                 }else{
                 values.push(Double.parseDouble(temporary));
-
             }
         }
-        
 
-       /* for(double value:values){
-            number += value;
+
+        for(String temp: operators){
+            System.out.println(temp);
+        }
+        for(double temp: values){
+            System.out.println(temp);
+        }
+       /* number = values.pop();
+        for(String sign:operators){
+            double temp = values.pop();
+            if(sign.equals('+')) {
+                number = number + temp;
+            } else if (sign.equals('-')) {
+                number = number - temp;
+            } else if (sign.equals('*')) {
+                number = number * temp;
+            }else if (sign.equals('/')) {
+                number = number / temp;
+            }
         }*/
+
+
+
         return number;
     }
 }

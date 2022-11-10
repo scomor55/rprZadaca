@@ -15,7 +15,7 @@ public class App
         Scanner in = new Scanner(System.in);*/
        /* String expression = in.nextLine();*/
 
-        String expression = "( 1 + ( 5 * 20 ) )";
+        String expression = "( 1 + 2 ) * 3";
         char[] str = expression.toCharArray();
 
 
