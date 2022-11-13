@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -7,17 +8,15 @@ import java.util.Stack;
 
 public class ExpressionEvaluator {
     public static double evaluate(String s){
-        double number = 0;
+        double number ;
 
         String[] str = s.split("\\s+");
-        Queue<String> q = new LinkedList<String>();
+        Queue<String> q = new LinkedList<>();
 
-        for(String temp : str){
-            q.add(temp);
-        }
+        Collections.addAll(q, str);
 
-        Stack<String> operators = new Stack<String>();
-        Stack<Double> values = new Stack<Double>();
+        Stack<String> operators = new Stack<>();
+        Stack<Double> values = new Stack<>();
 
         while(!q.isEmpty()){
             String temporary = q.poll();
