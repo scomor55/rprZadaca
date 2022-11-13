@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit test for simple App.
@@ -15,6 +15,8 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        assertThrows(RuntimeException.class, () -> { ExpressionEvaluator.evaluate("( 2 +2 )");});
     }
+
 }
+
