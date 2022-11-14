@@ -81,7 +81,9 @@
               <artifactId>maven-jar-plugin</artifactId>
               <configuration>
                 <archive>
-                  <manifestFile>src/main/resources/MANIFEST.MF</manifestFile>
+                  <manifest>
+                    <mainClass>ba.unsa.etf.rpr.App</mainClass>
+                  </manifest>
                 </archive>
               </configuration>
             </plugin>

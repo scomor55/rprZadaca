@@ -1,7 +1,8 @@
 package ba.unsa.etf.rpr;
 
 /**
- * Hello world!
+ * Provjera unosa i pozivanje funkcije!
+ * @author Safa
  *
  */
 public class App 
@@ -21,7 +22,7 @@ public class App
                 }
 
                 double number;
-                //number = ExpressionEvaluator.evaluate(String.valueOf(args));
+               // number = ExpressionEvaluator.evaluate(String.valueOf(args));
                 number = ExpressionEvaluator.evaluate(expression);
                 System.out.println("-------> "+ number);
 
