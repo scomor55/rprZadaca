@@ -9,8 +9,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        String expression = "( 1 + ( ( 2+ 3 ) * ( 4 * 5 ) ) ) ";
-
+      //  String expression = "( 1 + ( ( 2+ 3 ) * ( 4 * 5 ) ) ) ";
+        String expression = args[0];
         try{
             String temp1,temp2;
                 for(int i = 1; i < args.length ; i++){
@@ -20,9 +20,7 @@ public class App
                         throw new RuntimeException("Input error!");
                     }
                 }
-
                 double number;
-               // number = ExpressionEvaluator.evaluate(String.valueOf(args));
                 number = ExpressionEvaluator.evaluate(expression);
                 System.out.println("-------> "+ number);
 
