@@ -13,7 +13,7 @@ public class App
         String expression = args[0];
         try{
             String temp1,temp2;
-                for(int i = 1; i < args.length ; i++){
+                for(int i = 1; i < args[0].length() ; i++){
                     temp1 = args[i-1];
                     temp2 = args[i];
                     if(!(temp1.equals(" ")||temp2.equals(" "))){
