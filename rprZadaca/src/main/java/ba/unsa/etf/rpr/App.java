@@ -15,6 +15,7 @@ public class App
             char temp2;
             /**
              * Provjera unosa
+             * @author Safa
              */
             for(int i = 1; i < expression.length() ; i++){
                     temp1 = expression.charAt(i-1);
