@@ -9,21 +9,23 @@ public class App
 {
     public static void main( String[] args )
     {
-      //  String expression = "( 1 + ( ( 2+ 3 ) * ( 4 * 5 ) ) ) ";
-        String expression = args[0];
+       String expression = args[0];
         try{
-            String temp1,temp2;
-                for(int i = 1; i < args[0].length() ; i++){
-                    temp1 = args[i-1];
-                    temp2 = args[i];
-                    if(!(temp1.equals(" ")||temp2.equals(" "))){
+            char temp1;
+            char temp2;
+            /**
+             * Provjera unosa
+             */
+            for(int i = 1; i < expression.length() ; i++){
+                    temp1 = expression.charAt(i-1);
+                    temp2 = expression.charAt(i);
+                    if(!(temp1 == ' ' ||temp2 == ' ')){
                         throw new RuntimeException("Input error!");
                     }
                 }
                 double number;
                 number = ExpressionEvaluator.evaluate(expression);
                 System.out.println("-------> "+ number);
-
         }catch(RuntimeException r){
             System.out.println("Input error code: " + r.getMessage());
         }
