@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Testovi!
+ * Implementation of ExpressionEvaluatorTest
  * @author Safa
  *
  */
@@ -14,7 +14,8 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate1() {
         /**
-         * Testiranje sabiranja
+         *
+         * Addition testing
          *
          */
 
@@ -27,7 +28,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate2() {
         /**
-         * Testiranje mnozenja
+         * Multiplication testing
          *
          */
         String rez;
@@ -38,7 +39,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate3() {
         /**
-         * Testiranje slozenijeg izraza
+         * Complex expression testing
          *
          */
         String rez;
@@ -49,7 +50,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate4() {
         /**
-         * Testiranje slozenijeg izraza
+         * Complex expression testing
          *
          */
         String rez;
@@ -60,7 +61,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate5() {
         /**
-         * Testiranje slozenijeg izraza
+         * Complex expression testing
          *
          */
         String rez;
@@ -71,7 +72,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate6() {
         /**
-         * Testiranje slozenijeg izraza
+         * Complex expression testing
          *
          */
         String rez;
@@ -82,7 +83,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate7() {
         /**
-         * Testiranje sqrt operatora
+         * Testing the sqrt operator
          *
          */
         String rez;
@@ -94,7 +95,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate8() {
         /**
-         * Testiranje primjera iz zadace
+         * Testing the example from the task
          *
          */
         String rez;
@@ -105,7 +106,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate9() {
         /**
-         * Testiranje dijeljenja
+         * Testing of the division
          *
          */
         String rez;
@@ -116,7 +117,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate10() {
         /**
-         * Testiranje oduzimanja
+         * Subtraction testing
          *
          */
         String rez;
@@ -127,7 +128,7 @@ public class ExpressionEvaluatorTest {
     @Test
     void evaluate11() {
         /**
-         * Testiranje slozenijeg izraza
+         * Testing a more complex expression
          *
          */
         String rez;
@@ -139,7 +140,7 @@ public class ExpressionEvaluatorTest {
     public void shouldAnswerWithTrue1()
     {
         /**
-         * Testiranje izuzetka
+         * Exception testing
          *
          */
         assertThrows(RuntimeException.class, () -> { ExpressionEvaluator.evaluate("( 2 +2 )");});
@@ -149,9 +150,31 @@ public class ExpressionEvaluatorTest {
     public void shouldAnswerWithTrue2()
     {
         /**
-         * Testiranje izuzetka
+         * Exception testing
          *
          */
         assertThrows(RuntimeException.class, () -> { ExpressionEvaluator.evaluate("( 1 + ( ( 2 + 3 )* ( 4 * 5 ) ) )");});
     }
+
+    @Test
+    public void shouldAnswerWithTrue3()
+    {
+        /**
+         * Exception testing
+         *
+         */
+        assertThrows(RuntimeException.class, () -> { ExpressionEvaluator.evaluate("( ( sqrt ( 625 ) - sqrt ( 225) ) - ( sqrt ( 100 ) - sqrt ( 25 ) ) ");});
+    }
+
+    @Test
+    public void shouldAnswerWithTrue4()
+    {
+        /**
+         * Exception testing
+         *
+         */
+        assertThrows(RuntimeException.class, () -> { ExpressionEvaluator.evaluate("( ( 720 / 6 ) /( 24 / 2 ) )");});
+    }
+
+
 }

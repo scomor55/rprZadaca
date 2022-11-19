@@ -18,5 +18,6 @@ public class AppTest
         assertThrows(RuntimeException.class, () -> { ExpressionEvaluator.evaluate("( 2 +2 )");});
     }
 
+
 }
 

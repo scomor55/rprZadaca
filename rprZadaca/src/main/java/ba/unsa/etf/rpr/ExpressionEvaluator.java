@@ -6,14 +6,40 @@ import java.util.Queue;
 import java.util.Stack;
 
 /**
- * Implementacija ExspressionEvaluator funkcije!
+ * Implementation ExspressionEvaluator
  * @author Safa
+ * @version 1.0
  *
  */
 
 public class ExpressionEvaluator {
-    public static double evaluate(String s){
-        double number ;
+
+    /**
+     * Implementation of method evaluate
+     * @param s
+     * @return
+     */
+    public static Double evaluate(String s){
+
+        char temp1;
+        char temp2;
+        /**
+         * Input check
+         * This input check is there so that we can test the correctness
+         * of the passed parameter from the ExpressionEvaluatorTest class
+         * @author Safa
+         */
+        for(int i = 1; i < s.length() ; i++){
+            temp1 = s.charAt(i-1);
+            temp2 = s.charAt(i);
+            if((temp1 == '(' && temp2 != ' ') ||(temp1 != ' ' && temp2 == ')') ||(temp2 == '/' && temp1 !=' ')|| (temp1=='/' && temp2 != ' ')||(temp2 == '*' && temp1 !=' ')|| (temp1=='*' && temp2 != ' ')||(temp2 == '-' && temp1 !=' ')|| (temp1=='-' && temp2 != ' ')||(temp2 == '+' && temp1 !=' ')|| (temp1=='+' && temp2 != ' ')||(temp2 == 's' && temp1 !=' ')|| (temp1=='t' && temp2 != ' ')){
+                throw new RuntimeException("Input error!");
+            }
+        }
+
+
+
+        Double number ;
 
         String[] str = s.split("\\s+");
         Queue<String> q = new LinkedList<>();
@@ -22,6 +48,10 @@ public class ExpressionEvaluator {
 
         Stack<String> operators = new Stack<>();
         Stack<Double> values = new Stack<>();
+
+        /**
+         * Determining operators and values
+         */
 
         while(!q.isEmpty()){
             String temporary = q.poll();

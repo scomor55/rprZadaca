@@ -10,15 +10,11 @@ public class App
     public static void main( String[] args )
     {
        String expression = args[0];
-      //  String expression = "( ( 720 / 6 ) / ( 24 / 2 ) )";
-      //  String expression = "( ( sqrt ( 625 ) - sqrt ( 225 ) ) - ( sqrt ( 100 ) - sqrt ( 25 ) ) )";
-
-      //  String expression = "( 1 + ( ( 2 + 3 ) * ( 4 * 5 )))";
         try{
             char temp1;
             char temp2;
             /**
-             * Provjera unosa
+             * Input check
              * @author Safa
              */
             for(int i = 1; i < expression.length() ; i++){
@@ -28,7 +24,10 @@ public class App
                         throw new RuntimeException("Input error!");
                     }
                 }
-                double number;
+            /**
+             * Calling the Evaluate function from the ExpressionEvaluatorTest class
+             */
+                Double number;
                 number = ExpressionEvaluator.evaluate(expression);
                 System.out.println("-------> "+ number);
         }catch(RuntimeException r){
