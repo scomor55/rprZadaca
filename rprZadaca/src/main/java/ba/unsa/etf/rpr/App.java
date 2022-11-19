@@ -1,8 +1,8 @@
 package ba.unsa.etf.rpr;
 
 /**
- * Provjera unosa i pozivanje funkcije!
- * @author Safa
+ * App implementation
+ * @author Safet Čomor
  *
  */
 public class App 
@@ -15,7 +15,7 @@ public class App
             char temp2;
             /**
              * Input check
-             * @author Safa
+             * @author Safet Čomor
              */
             for(int i = 1; i < expression.length() ; i++){
                     temp1 = expression.charAt(i-1);

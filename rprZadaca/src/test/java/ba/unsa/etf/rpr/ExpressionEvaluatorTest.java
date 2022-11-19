@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ExpressionEvaluatorTest {
 
     @Test
-    void evaluate1() {
+    public void evaluate1() {
         /**
          *
          * Addition testing
@@ -26,7 +26,7 @@ public class ExpressionEvaluatorTest {
 
 
     @Test
-    void evaluate2() {
+    public void evaluate2() {
         /**
          * Multiplication testing
          *
@@ -37,7 +37,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate3() {
+    public void evaluate3() {
         /**
          * Complex expression testing
          *
@@ -48,7 +48,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate4() {
+    public void evaluate4() {
         /**
          * Complex expression testing
          *
@@ -59,7 +59,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate5() {
+    public void evaluate5() {
         /**
          * Complex expression testing
          *
@@ -70,7 +70,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate6() {
+    public void evaluate6() {
         /**
          * Complex expression testing
          *
@@ -81,7 +81,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate7() {
+     public void evaluate7() {
         /**
          * Testing the sqrt operator
          *
@@ -93,7 +93,7 @@ public class ExpressionEvaluatorTest {
 
 
     @Test
-    void evaluate8() {
+     public void evaluate8() {
         /**
          * Testing the example from the task
          *
@@ -104,7 +104,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate9() {
+    public void evaluate9() {
         /**
          * Testing of the division
          *
@@ -115,7 +115,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate10() {
+    public void evaluate10() {
         /**
          * Subtraction testing
          *
@@ -126,7 +126,7 @@ public class ExpressionEvaluatorTest {
     }
 
     @Test
-    void evaluate11() {
+    public void evaluate11() {
         /**
          * Testing a more complex expression
          *
