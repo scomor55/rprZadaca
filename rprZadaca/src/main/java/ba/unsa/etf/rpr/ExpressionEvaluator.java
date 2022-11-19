@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /**
  * Implementation ExspressionEvaluator
- * @author Safa
+ * @author Safet Čomor
  * @version 1.0
  *
  */
@@ -27,7 +27,7 @@ public class ExpressionEvaluator {
          * Input check
          * This input check is there so that we can test the correctness
          * of the passed parameter from the ExpressionEvaluatorTest class
-         * @author Safa
+         * @author Safet Čomor
          */
         for(int i = 1; i < s.length() ; i++){
             temp1 = s.charAt(i-1);
